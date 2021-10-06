@@ -2,7 +2,7 @@
 	"name": "commitrapido",
 	"displayName": "Fast commiter",
 	"description": "esta extension de vs code hace add a todos los archivos del repositorio ademas de un commit, push y pul del repositorio remoto ",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "Aldogtz",
 	"engines": {
 		"vscode": "^1.60.0"
@@ -24,12 +24,12 @@
 		],
 		"keybindings": [
 			{
-			  "command": "identificador.commit",
-			  "key": "Shift+c",
-			  "mac": "Shift+c",
-			  "when": "editorTextFocus"
+				"command": "identificador.commit",
+				"key": "Shift+c",
+				"mac": "Shift+c",
+				"when": "editorTextFocus"
 			}
-		  ]
+		]
 	},
 	"scripts": {
 		"lint": "eslint .",
@@ -50,5 +50,5 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Aldoggutierrez/fast-commit.git"
-	  }
+	}
 }
