@@ -21,7 +21,15 @@
 				"command": "identificador.commit",
 				"title": "Hacer Add,Commit,Push y Pull"
 			}
-		]
+		],
+		"keybindings": [
+			{
+			  "command": "identificador.commit",
+			  "key": "Shift+c",
+			  "mac": "Shift+c",
+			  "when": "editorTextFocus"
+			}
+		  ]
 	},
 	"scripts": {
 		"lint": "eslint .",
