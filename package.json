@@ -1,5 +1,5 @@
 {
-	"name": "commit_rapido",
+	"name": "commitrapido",
 	"displayName": "Fast commiter",
 	"description": "esta extension de vs code hace add a todos los archivos del repositorio ademas de un commit, push y pul del repositorio remoto ",
 	"version": "0.0.1",
