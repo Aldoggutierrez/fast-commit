@@ -1,23 +1,25 @@
 {
-	"name": "identificador",
-	"displayName": "prueba",
-	"description": "prueba",
+	"name": "commit_rapido",
+	"displayName": "Fast commiter",
+	"description": "esta extension de vs code hace add a todos los archivos del repositorio ademas de un commit, push y pul del repositorio remoto ",
 	"version": "0.0.1",
+	"publisher": "Aldogtz",
 	"engines": {
 		"vscode": "^1.60.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"icon": "images/icon.png",
 	"activationEvents": [
-		"onCommand:identificador.helloWorld"
+		"onCommand:identificador.commit"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "identificador.helloWorld",
-				"title": "Hello World"
+				"command": "identificador.commit",
+				"title": "Hacer Add,Commit,Push y Pull"
 			}
 		]
 	},
@@ -36,5 +38,9 @@
 		"mocha": "^9.1.1",
 		"typescript": "^4.4.3",
 		"@vscode/test-electron": "^1.6.2"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Aldoggutierrez/fast-commit.git"
+	  }
 }

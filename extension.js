@@ -10,27 +10,54 @@ const vscode = require('vscode');
  */
 function activate(context) {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "identificador" is now active!');
+	let disposable = vscode.commands.registerCommand('identificador.commit', function () {
+		function exitoadd() {
+			vscode.window.showInformationMessage("se ejecuto el comando el comando add");
+			let commit = vscode.commands.executeCommand('git.commitStaged');
+			commit.then(exitocommit,fallocommit);
+		}
+		  
+		function falloadd() {
+			vscode.window.showInformationMessage("no se ejecuto el comando add");
+		}
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with  registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('identificador.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
+		function exitocommit() {
+			vscode.window.showInformationMessage("se ejecuto el comando el comando commit");
+			let pull = vscode.commands.executeCommand('git.pull');
+			pull.then(exitopull,fallopull);
+		}
+		  
+		function fallocommit() {
+			vscode.window.showInformationMessage("no se ejecuto el comando commit");
+		}
 
-		// Display a message box to the user
-		vscode.commands.executeCommand('git.stageAll');
-		vscode.commands.executeCommand('git.commitStaged');
-		vscode.commands.executeCommand('git.pull');
-		vscode.commands.executeCommand('git.push');
+		function exitopull() {
+			vscode.window.showInformationMessage("se ejecuto el comando el comando pull");
+			let push = vscode.commands.executeCommand('git.push');
+			push.then(exitopush,fallopush);
+		}
+		  
+		function fallopull() {
+			vscode.window.showInformationMessage("no se ejecuto el comando pull");
+		}
+
+		function exitopush() {
+			vscode.window.showInformationMessage("se ejecuto el comando el comando push");
+		}
+		  
+		function fallopush() {
+			vscode.window.showInformationMessage("no se ejecuto el comando push");
+		}
+
+
+		let add = vscode.commands.executeCommand('git.stageAll');
+		add.then(exitoadd,falloadd);    
 	});
 
 	context.subscriptions.push(disposable);
 }
 
-// this method is called when your extension is deactivated
+
 function deactivate() {}
 
 module.exports = {
