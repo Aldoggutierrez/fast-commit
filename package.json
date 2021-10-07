@@ -25,8 +25,8 @@
 		"keybindings": [
 			{
 				"command": "identificador.commit",
-				"key": "Shift+c",
-				"mac": "Shift+c",
+				"key": "Ctrl+Shift+ñ",
+				"mac": "cmd+Shift+ñ",
 				"when": "editorTextFocus"
 			}
 		]
